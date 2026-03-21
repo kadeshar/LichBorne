@@ -32,11 +32,11 @@ Each of the 10 playable classes has its own tab with up to **54 roster slots** a
 
 ## Screenshots
 Class Tabs
-![Class Tab](Class%20Tab.png)
+![Class Tab](screenshots/Class%20Tab.png)
 Raid Window
-![Raid Window](Raid%20Window.png)
+![Raid Window](screenshots/Raid%20Window.png)
 Character Sheet
-![Character Sheet](Character%20Shet.png)
+![Character Sheet](screenshots/Character%20Shet.png)
 
 #### 
 
