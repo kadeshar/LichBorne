@@ -29,6 +29,12 @@ Each of the 10 playable classes has its own tab with up to **54 roster slots** a
 * **Tier rating** — color-coded T1 through T17
 * **Add to Raid** (+) and **Invite to Group** (>) buttons per row
 
+## Screenshots
+
+![Class Tab](Class%20Tab.png)
+![Raid Window](Raid%20Window.png)
+![Character Sheet](Character%20Shet.png)
+
 #### 
 
 #### Page Switching
