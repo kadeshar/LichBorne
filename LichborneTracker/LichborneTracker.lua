@@ -4914,8 +4914,9 @@ function LichborneTracker_Open()
 end
 
 -- ── Minimap button ────────────────────────────────────────────
-local LichborneMinimapIcon = LibStub("LibDBIcon-1.0", true)
-local LichborneDataBroker = LibStub("LibDataBroker-1.1", true)
+local libStub = _G.LibStub
+local LichborneMinimapIcon = libStub and libStub("LibDBIcon-1.0", true)
+local LichborneDataBroker = libStub and libStub("LibDataBroker-1.1", true)
 local miniLDB = LichborneDataBroker and LichborneDataBroker:NewDataObject("LichborneTracker", {
     type = "launcher",
     icon = "Interface\\Icons\\INV_Misc_Note_01",
