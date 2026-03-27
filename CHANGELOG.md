@@ -4,7 +4,17 @@ All notable changes to Lichborne are documented in this file.
 
 ## Unreleased
 
-## 1.7.2 - 2026-03-26
+
+## 1.72 - 2026-03-26
+
+### Fixed
+
+* Fixed nil value crash (`attempt to index local 'c'`) when opening the raid selector dropdown with an unmapped tier value — now falls back to T1 color safely.
+* Fixed dropdown menus (tier, raid, group, page, spec, sort) orphaning on screen when the addon is closed via ESC key — all menus now close via an OnHide hook on the main frame.
+
+
+
+## 1.71 - 2026-03-26
 
 ### Added
 

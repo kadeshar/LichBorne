@@ -2128,7 +2128,7 @@ local function BuildRaidFrame(parent, fl)
             local mb = CreateFrame("Button",nil,raidDDMenu)
             mb:SetSize(256,20); mb:SetPoint("TOPLEFT",raidDDMenu,"TOPLEFT",2,-2-(idx-1)*22)
             local mbbg=mb:CreateTexture(nil,"BACKGROUND"); mbbg:SetAllPoints(mb)
-            local c=TIER_COLORS[t]; mbbg:SetTexture(c.r*0.25,c.g*0.25,c.b*0.25,1)
+            local c=TIER_COLORS[t] or TIER_COLORS[1]; mbbg:SetTexture(c.r*0.25,c.g*0.25,c.b*0.25,1)
             mb:SetHighlightTexture("Interface\\Buttons\\UI-Common-MouseHilight","ADD")
             local mblbl=mb:CreateFontString(nil,"OVERLAY","GameFontNormalSmall"); mblbl:SetAllPoints(mb); mblbl:SetJustifyH("CENTER")
             mblbl:SetText("|cffffffff"..rd[1].."|r  |cffaaaaaa("..rd[2].." players)|r")
@@ -4693,7 +4693,7 @@ local function OnFirstShow()
     infoText:SetText(
         "|cffd4af37LICHBORNE|r\n" ..
         "|cffd4af37Gear Tracker & Raid Planner|r\n" ..
-        "|cffd4af37v1.71|r\n" ..
+        "|cffd4af37v1.72|r\n" ..
         "\n" ..
         "|cffaaaaaaQuestions & Support:|r\n" ..
         "|cffd4af37lichborne.wow|r\n" ..
@@ -4784,10 +4784,21 @@ local function BuildFrameBG()
     title:SetPoint("TOPLEFT", f, "TOPLEFT", 10, -12)
     title:SetPoint("TOPRIGHT", f, "TOPRIGHT", -280, -12)
     title:SetJustifyH("LEFT")
-    title:SetText("|cffC69B3ALICHBORNE|r  —  Gear Tracker  |cffaaaaaa v1.71|r")
+    title:SetText("|cffC69B3ALICHBORNE|r  —  Gear Tracker  |cffaaaaaa v1.72|r")
     local closeBtn = CreateFrame("Button", "LichborneCloseBtn", f, "UIPanelCloseButton")
     closeBtn:SetPoint("TOPRIGHT", f, "TOPRIGHT", 2, 2)
     closeBtn:SetScript("OnClick", function() f:Hide() end)
+
+    -- Close all dropdown menus when the frame hides (ESC key or close button)
+    f:SetScript("OnHide", function()
+        if _G["LichborneRaidTierMenu"]  then _G["LichborneRaidTierMenu"]:Hide()  end
+        if _G["LichborneRaidRaidMenu"]  then _G["LichborneRaidRaidMenu"]:Hide()  end
+        if _G["LichborneRaidGroupMenu"] then _G["LichborneRaidGroupMenu"]:Hide() end
+        if _G["LichbornePageDDMenu"]    then _G["LichbornePageDDMenu"]:Hide()    end
+        if _G["LichborneAllGroupMenu"]  then _G["LichborneAllGroupMenu"]:Hide()  end
+        if LichborneSpecMenu            then LichborneSpecMenu:Hide()            end
+        CloseAllSortMenus()
+    end)
 
     -- ── Danger zone buttons (far right of title bar) ──────────
     local function MakeDangerConfirm(title2, lines, onConfirm)
