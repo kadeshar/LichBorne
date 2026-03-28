@@ -33,8 +33,7 @@
 
 Each of the 10 playable classes has its own tab with up to 54 roster slots across 3 pages. Each character row tracks:
 
-- Row number — muted grey, turns gold on hover
-- Spec icon — auto-detected from talent inspection
+- Spec icon — auto-detected from talent inspection.  Can be manually changed.
 - Name — editable, colored by class
 - iLvl — average equipped item level calculated via inspect
 - Gear Score — actual WotLK-style GearScore calculated from inspected gear, colored by item quality
@@ -43,7 +42,7 @@ Each of the 10 playable classes has its own tab with up to 54 roster slots acros
 - Add to Raid (+) and Invite to Group (>) buttons per row
 - Hover any gear slot to see the full item tooltip
 
-### Bottom Controls (Class Tabs)
+### Bottom Controls 
 
 - **+ Add Target** — Inspects your current target and adds them
 - **+ Add Group** — Bulk-adds all group/raid members
@@ -70,9 +69,9 @@ Per-character gear slot wishlist, accessible from all tabs.
 
 - 15 selectable slots: Head, Neck, Shoulders, Back, Chest, Wrists, Hands, Waist, Legs, Feet, Ring, Trinket, Main Hand, Off Hand, Ranged
 - Max 2 needs per character
-- Click a Need Box cell to open the picker popup
+- Click a Need Box cell to open the popup
 - Left-click a slot icon to mark as needed, right-click to remove
-- Once at max (2), remaining slots are dimmed
+- At max (2), remaining slots are dimmed
 - Right-click the Need Box cell itself to clear all needs for that character
 - Changes sync instantly across Class, All, and Raid tabs
 - Stored in LichborneTrackerDB.needs per character name
