@@ -8,9 +8,9 @@
 
 ## Screenshots
 
-!\[Class Tracker](Screenshots/ClassTab.png)
-!\[Raid Planner](Screenshots/RaidTab.png)
-!\[Character Sheet](Screenshots/CharacterSheet.png)
+![Class Tracker](Screenshots/ClassTab.png)
+![Raid Planner](Screenshots/RaidTab.png)
+![Character Sheet](Screenshots/CharacterSheet.png)
 
 \---
 
